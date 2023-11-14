@@ -2,6 +2,7 @@ import {useState,useEffect} from "react";
 import Addtasks from "./Addtasks.jsx";
 import UndoRedotasks from "./UndoRedotasks.jsx";
 import Filtertasks from "./Filtertasks.jsx";
+import AddtaskMenu from "./AddtaskMenu.jsx";
 
 import "../Component_styles/TodoManager.css"
 export default function TodoManager(){
@@ -13,7 +14,9 @@ export default function TodoManager(){
                 <Addtasks/>
                 <UndoRedotasks/>
                 <Filtertasks/>
+
             </div>
+            <AddtaskMenu/>
 
         </div>
     )
