@@ -1,7 +1,7 @@
 #main__navbar{
     display: flex;
     flex-direction: row;
-    padding: 2rem 0 0 3rem;
+    padding: 1.5rem 0 0 2.5rem;
 }
 #main__navbar p{
     font-family: 'Josefin Sans', sans-serif;

@@ -1,0 +1,68 @@
+/*----Options - Buttons------*/
+.options_button {
+    border: none;
+    outline: none;
+    background-color: #6c5ce7;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+    margin-right: 6rem;
+
+}
+
+.options_button:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+
+#Filtertasks{
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    /*border: 1px solid #6c5ce7;*/
+    /*border-bottom: 4px solid #a29bfe;*/
+    color: #6c5ce7;
+
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+    transition: all linear 0.2s;
+
+}
+
+#Filtertasks:hover{
+    color: #fff;
+    background-color: #655da2;
+
+}
+
+
+#Filtertasks option{
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    color: #6c5ce7;
+    background-color: white;
+    height: 3rem;
+
+ }
+
+/*------------*/
+
+#TodoManager-container_options{
+    display: flex;
+    margin: 4rem  0 0 15%;
+    /*background-color: yellow;*/
+    width: 70%;
+
+    position: relative;
+}
