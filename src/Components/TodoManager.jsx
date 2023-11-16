@@ -18,8 +18,9 @@ export default function TodoManager() {
     const [displayAddtaskMenu, setdisplayAddtaskMenu] = useState(false)
 
 
-    // console.log(History)
-    // console.log(Index)
+    console.log("History--------"+History)
+    console.log("Index"+ Index)
+    console.log(Todos)
 
     // for controlling the visibility of the menu
     function ToggleMenu(val) {
@@ -32,7 +33,7 @@ export default function TodoManager() {
         // updating history
         setHistory(newHistory)
         //     updating the index value
-        setIndex(newHistory.length)
+        setIndex(newHistory.length-1)
 
     }
 
@@ -55,7 +56,7 @@ export default function TodoManager() {
         <div id={"TodoManager-container"}>
             <div id={"TodoManager-container_options"}>
                 <Addtasks ToggleMenu={ToggleMenu}/>
-                <UndoRedotasks Index={Index} setIndex={setIndex} setHistory={setHistory} History={History}/>
+                <UndoRedotasks setTodos={setTodos} Index={Index} setIndex={setIndex} setHistory={setHistory} History={History}/>
                 <Filtertasks/>
 
             </div>
