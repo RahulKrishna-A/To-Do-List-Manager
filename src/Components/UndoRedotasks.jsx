@@ -8,7 +8,13 @@ export default function UndoRedotasks(props){
     let canRedo = props.Index < props.History.length-1
 
     function onClickRedo(){
-
+        if(canRedo){
+            props.setIndex((prev)=>{
+               return  prev+1
+            })
+            // since index value is not reduced instantly we use Index+1
+            props.setTodos(JSON.parse(props.History[props.Index+1]))
+        }
     }
 
     function onClickUndo(){
