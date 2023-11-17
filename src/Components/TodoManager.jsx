@@ -19,8 +19,8 @@ export default function TodoManager() {
     const [displayAddtaskMenu, setdisplayAddtaskMenu] = useState(false)
 
 
-    console.log("History--------"+History)
-    console.log("Index"+ Index)
+    console.log("History--------" + History)
+    console.log("Index" + Index)
     console.log(Todos)
 
     // for controlling the visibility of the menu
@@ -30,11 +30,11 @@ export default function TodoManager() {
 
     function updateHistory(val) {
         // having a new variable to have exact length for index
-        const newHistory = [...History, JSON.stringify(val)];
+        const newHistory = [...History, JSON.stringify([val])];
         // updating history
         setHistory(newHistory)
         //     updating the index value
-        setIndex(newHistory.length-1)
+        setIndex(newHistory.length - 1)
 
     }
 
@@ -50,23 +50,38 @@ export default function TodoManager() {
     // useEffect(() => {
     //     localStorage.setItem("ToDoListManager",JSON.stringify(Todos))
     // }, []);
-    //
+
+
+
+
+    let TodosList = Todos.map((datas)=>{
+        if(Filter==="All"){
+            return <Todosbar/>
+        }else{
+            if(datas.Status===Filter){
+                return <Todosbar/>
+            }
+        }
+    })
+
 
 
     return (
-        <div id={"TodoManager-container"}>
+        <div style={{backgroundColor:"black"}} id={"TodoManager-container"}>
             <div id={"TodoManager-container_options"}>
                 <div id={"TodoManager-container_options_Titles"}>Your Tasks</div>
                 <Addtasks ToggleMenu={ToggleMenu}/>
-                <UndoRedotasks setTodos={setTodos} Index={Index} setIndex={setIndex} setHistory={setHistory} History={History}/>
-                <Filtertasks/>
+                <UndoRedotasks setTodos={setTodos} Index={Index} setIndex={setIndex} setHistory={setHistory}
+                               History={History}/>
+                <Filtertasks Filter={Filter} setFilter={setFilter}/>
 
             </div>
             <AddtaskMenu History={History} updateHistory={updateHistory} Todos={Todos} setTodos={setTodos}
                          ToggleMenu={ToggleMenu}
                          displayAddtaskMenu={displayAddtaskMenu} setIndex={setIndex}/>
-            <Todosbar/>
-
+            <div id={"TodoManager-container_Todos"} >
+            {TodosList}
+            </div>
         </div>
     )
 }
