@@ -27,10 +27,14 @@ export default function AddtaskMenu(props) {
     // adding new tasks
     function updateTodo(CurrentTodo) {
         props.setTodos((prev) => {
+            // To update history variable
+            props.updateHistory([...prev, CurrentTodo])
             return (
                 [...prev, CurrentTodo]
             )
         })
+
+
 
     }
 
@@ -47,9 +51,7 @@ export default function AddtaskMenu(props) {
             let Duedate = e.target[1].value;
             let CurrentTodo = new Todo(Title, {DueDate: Duedate})
             updateTodo(CurrentTodo)
-            props.updateHistory(CurrentTodo)
 
-            // props.setIndex(props.History.length)
 
         }
     }

@@ -19,7 +19,7 @@
     box-shadow: 0px 0px 0px 0px #a29bfe;
 }
 
-#Filtertasks{
+#Filtertasks {
     outline: none;
     border: none;
 
@@ -36,14 +36,14 @@
 
 }
 
-#Filtertasks:hover{
+#Filtertasks:hover {
     color: #fff;
     background-color: #655da2;
 
 }
 
 
-#Filtertasks option{
+#Filtertasks option {
     outline: none;
     border: none;
     position: absolute;
@@ -54,19 +54,19 @@
     background-color: white;
     height: 3rem;
 
- }
+}
 
 /*-------------------button alignment--------------------------------*/
-#add_Task{
+#add_Task {
     margin-left: auto;
 }
 
 
 /*------------*/
 
-#TodoManager-container_options{
+#TodoManager-container_options {
     display: flex;
-    margin: 4rem  0 0 15%;
+    margin: 4rem 0 0 15%;
     /*background-color: yellow;*/
     width: 70%;
     align-items: center;
@@ -74,7 +74,7 @@
     position: relative;
 }
 
-#TodoManager-container{
+#TodoManager-container {
     position: relative;
     /*background-color: yellow;*/
     height: 80vh;
@@ -82,7 +82,7 @@
 
 }
 
-#TodoManager-container_options_Titles{
+#TodoManager-container_options_Titles {
     font-family: 'Josefin Sans', sans-serif;
     width: 25%;
     /*background-color: red;*/
@@ -90,13 +90,27 @@
 }
 
 
-
 /*----------------------*/
-#TodoManager-container_Todos{
+#TodoManager-container_Todos {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     height: 65vh;
     /*background-color: #a29bfe;*/
     overflow-y: auto;
+}
+
+button[disabled] {
+    background-color: grey;
+
+}
+
+button[disabled]:active {
+    transform: none;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+}
+
+button[disabled]:hover {
+    cursor: no-drop;
+
 }

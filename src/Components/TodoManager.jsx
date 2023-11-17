@@ -9,7 +9,9 @@ import "../Component_styles/TodoManager.css"
 
 export default function TodoManager() {
 
-    const [Todos, setTodos] = useState([])
+    // To avoid initial value of TODOS as [] in local storage again
+
+    const [Todos, setTodos] = useState(JSON.parse(localStorage.getItem("ToDoListManager")));
     // history variables
     const [History, setHistory] = useState([JSON.stringify(Todos)])
     const [Index, setIndex] = useState(0)
@@ -30,36 +32,42 @@ export default function TodoManager() {
 
     function updateHistory(val) {
         // having a new variable to have exact length for index
-        const newHistory = [...History, JSON.stringify([val])];
+        const newHistory = [...History, JSON.stringify(val)];
+
         // updating history
         setHistory(newHistory)
         //     updating the index value
         setIndex(newHistory.length - 1)
+        console.log(newHistory)
 
     }
 
     // useEffect for storing and getting from local storage
-    //
+
     // useEffect(()=>{
-    //     if(localStorage.getItem("ToDoListManager")){
+    //     // console.log(localStorage.getItem("ToDoListManager"))
+    //     const data =window.localStorage.getItem("ToDoListManager")
+    //     if(data){
+    //         console.log(data)
     //         setTodos(JSON.parse(localStorage.getItem("ToDoListManager")))
     //     }
     //
     // },[])
-    //
-    // useEffect(() => {
-    //     localStorage.setItem("ToDoListManager",JSON.stringify(Todos))
-    // }, []);
+
+    useEffect(() => {
+        window.localStorage.setItem("ToDoListManager",JSON.stringify(Todos))
+
+    },[Todos]);
 
 
 
 
     let TodosList = Todos.map((datas)=>{
         if(Filter==="All"){
-            return <Todosbar  key={datas.id} setTodos={setTodos} uniqueID={datas.id} DueDate={datas.DueDate} Title={datas.Title} Status={datas.Status}/>
+            return <Todosbar  key={datas.id} updateHistory={updateHistory} setTodos={setTodos} uniqueID={datas.id} DueDate={datas.DueDate} Title={datas.Title} Status={datas.Status}/>
         }else{
             if(datas.Status===Filter){
-                return <Todosbar key={datas.id} setTodos={setTodos} uniqueID={datas.id} DueDate={datas.DueDate} Title={datas.Title} Status={datas.Status}/>
+                return <Todosbar key={datas.id} updateHistory={updateHistory} setTodos={setTodos} uniqueID={datas.id} DueDate={datas.DueDate} Title={datas.Title} Status={datas.Status}/>
             }
         }
     })
