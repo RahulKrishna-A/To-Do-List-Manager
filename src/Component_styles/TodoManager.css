@@ -63,6 +63,7 @@
     margin: 4rem  0 0 15%;
     /*background-color: yellow;*/
     width: 70%;
+    align-items: center;
 
     position: relative;
 }
@@ -71,4 +72,12 @@
     position: relative;
     /*background-color: yellow;*/
     height: 60vh;
+
+}
+
+#TodoManager-container_options_Titles{
+    font-family: 'Josefin Sans', sans-serif;
+    width: 25%;
+    /*background-color: red;*/
+    font-size: 2rem;
 }

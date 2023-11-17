@@ -4,10 +4,12 @@
     width: 100dvw;
     height: 100dvh;
     overflow-x: hidden;
+
 }
 
 button[disabled]{
     background-color: grey;
+    /*background-image:url("./assets/img.png") ;*/
 
 }
 
@@ -15,3 +17,4 @@ button[disabled]{
 /*    transform: none;*/
 /*    box-shadow: 0px 5px 0px 0px #a29bfe;*/
 /*}*/
+

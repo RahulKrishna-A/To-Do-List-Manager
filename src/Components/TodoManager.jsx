@@ -3,6 +3,7 @@ import Addtasks from "./Addtasks.jsx";
 import UndoRedotasks from "./UndoRedotasks.jsx";
 import Filtertasks from "./Filtertasks.jsx";
 import AddtaskMenu from "./AddtaskMenu.jsx";
+import Todosbar from "./Todosbar.jsx";
 
 import "../Component_styles/TodoManager.css"
 
@@ -55,6 +56,7 @@ export default function TodoManager() {
     return (
         <div id={"TodoManager-container"}>
             <div id={"TodoManager-container_options"}>
+                <div id={"TodoManager-container_options_Titles"}>Your Tasks</div>
                 <Addtasks ToggleMenu={ToggleMenu}/>
                 <UndoRedotasks setTodos={setTodos} Index={Index} setIndex={setIndex} setHistory={setHistory} History={History}/>
                 <Filtertasks/>
@@ -63,6 +65,7 @@ export default function TodoManager() {
             <AddtaskMenu History={History} updateHistory={updateHistory} Todos={Todos} setTodos={setTodos}
                          ToggleMenu={ToggleMenu}
                          displayAddtaskMenu={displayAddtaskMenu} setIndex={setIndex}/>
+            <Todosbar/>
 
         </div>
     )
