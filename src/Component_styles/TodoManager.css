@@ -97,6 +97,6 @@
     display: flex;
     flex-direction: column;
     height: 65vh;
-    background-color: #a29bfe;
-    overflow-y: scroll;
+    /*background-color: #a29bfe;*/
+    overflow-y: auto;
 }

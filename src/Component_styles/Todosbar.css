@@ -77,7 +77,7 @@
 
 
 
-.todos-bar_status.completed{
+.todos-bar_status.Completed{
     background-color: rgba(210, 241, 176, 0.91);
     padding: 6px 8px 6px 8px;
     color: rgba(8, 154, 8, 0.87);
@@ -86,12 +86,13 @@
     margin-left: auto;
 }
 
-.todos-bar_status.pending{
+.todos-bar_status.Pending{
     background-color: rgb(241, 217, 200);
     padding: 6px 8px 6px 8px;
     color: rgb(225, 124, 34);
     font-weight: 550;
     border-radius: 8px;
+    margin-left: auto;
 }
 
 .todos-bar_due{
@@ -101,6 +102,9 @@
     font-weight: 550;
     border-radius: 8px;
     margin-left: 2rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -110,6 +114,6 @@
     margin-left: 2rem;
 }
 
-.Todos-bar_deleteIcon:hover{
-    fill: #de3a3a;
+.Todos-bar_deleteIcon:hover {
+    scale: 1.08;
 }

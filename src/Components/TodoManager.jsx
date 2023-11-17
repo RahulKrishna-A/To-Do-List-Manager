@@ -19,9 +19,9 @@ export default function TodoManager() {
     const [displayAddtaskMenu, setdisplayAddtaskMenu] = useState(false)
 
 
-    console.log("History--------" + History)
-    console.log("Index" + Index)
-    console.log(Todos)
+    // console.log("History--------" + History)
+    // console.log("Index" + Index)
+    // console.log(Todos)
 
     // for controlling the visibility of the menu
     function ToggleMenu(val) {
@@ -56,10 +56,10 @@ export default function TodoManager() {
 
     let TodosList = Todos.map((datas)=>{
         if(Filter==="All"){
-            return <Todosbar/>
+            return <Todosbar  key={datas.id} setTodos={setTodos} uniqueID={datas.id} DueDate={datas.DueDate} Title={datas.Title} Status={datas.Status}/>
         }else{
             if(datas.Status===Filter){
-                return <Todosbar/>
+                return <Todosbar key={datas.id} setTodos={setTodos} uniqueID={datas.id} DueDate={datas.DueDate} Title={datas.Title} Status={datas.Status}/>
             }
         }
     })
@@ -67,7 +67,7 @@ export default function TodoManager() {
 
 
     return (
-        <div style={{backgroundColor:"black"}} id={"TodoManager-container"}>
+        <div  id={"TodoManager-container"}>
             <div id={"TodoManager-container_options"}>
                 <div id={"TodoManager-container_options_Titles"}>Your Tasks</div>
                 <Addtasks ToggleMenu={ToggleMenu}/>
