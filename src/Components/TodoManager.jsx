@@ -12,8 +12,9 @@ export default function TodoManager() {
 
     // Todos ---> Storing Todos.
     // Local storage (getItem) is called initially to avoid false setting of Local Storage as [].
-    const [Todos, setTodos] = useState([]);
-        // useState(JSON.parse(localStorage.getItem("ToDoListManager")));
+
+    const [Todos, setTodos] = useState(JSON.parse(localStorage.getItem("ToDoListManager")) || []);
+        //
 
     // History ---> Storing States (History).
     const [History, setHistory] = useState([JSON.stringify(Todos)])
