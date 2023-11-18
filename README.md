@@ -2,6 +2,10 @@
 # To-Do-List-Manager
 
 This repository contains the implementation of a simple To-Do List Manager, designed as a programming exercise. The application allows users to manage their tasks by adding new tasks, marking them as completed, deleting tasks, viewing tasks based on their completion status along with Undo/Redo functionality. Additionally, the application incorporates key design patterns.
+
+##Live Demo
+https://todolistmanager-rahul.netlify.app/
+
 ## Key Features
 - Add New Tasks : Users can seamlessly add new tasks, specifying a description and a due date.
 
@@ -12,11 +16,13 @@ This repository contains the implementation of a simple To-Do List Manager, desi
 - Filter Tasks : Tasks can be filteres based on their completion status.
 
 - Local Storage : Tasks are stored in the local storage of the user's browser.
+- 
 ## Design Patterns Used
 
 - Memento Pattern : The Memento Pattern is utilized to enable undo and redo actions, for managing the tasks.
 
 - Builder Pattern : The Builder Pattern is applied for task construction for optional attribute like DueDate.
+  
 ## Built with/Technologies used
 - React
 - CSS3
