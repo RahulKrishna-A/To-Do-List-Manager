@@ -1,9 +1,10 @@
 export default function UndoRedotasks(props) {
 
-    // Memento Pattern
-    // --> Here TodoList is the originator which's internal state is to be stored
-    // --> Memento is the snapshot of the state at a particular point of time , Here it is the NewHistory Array
-    // --> Here History array is the caretaker which stores the Mememtos
+    // Memento Pattern for UNDO/REDO
+    // --> TodoList - originator (Owner of state)
+    // --> NewHistory - Memento ( snapshot of the state at a particular point of time )
+    // --> History array - caretaker ( stores the Mememtos )
+
     let canUndo = props.Index > 0
     let canRedo = props.Index < props.History.length - 1
 
@@ -12,7 +13,7 @@ export default function UndoRedotasks(props) {
             props.setIndex((prev) => {
                 return prev + 1
             })
-            // since index value is not reduced instantly we use Index+1
+            // Increasing Index Variable
             props.setTodos(JSON.parse(props.History[props.Index + 1]))
         }
     }
@@ -22,7 +23,7 @@ export default function UndoRedotasks(props) {
             props.setIndex((prev) => {
                 return prev - 1
             })
-            // since index value is not reduced instantly we use Index-1
+            // Decreasing Index Variable
             props.setTodos(JSON.parse(props.History[props.Index - 1]))
         }
     }

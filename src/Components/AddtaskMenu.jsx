@@ -1,33 +1,36 @@
 import "../Component_styles/AddtaskMenu.css";
 import {useState} from "react";
-
 import {v4 as uuid} from "uuid";
-//Refactor EVERY COMMENT WITH CLEAR WORDS LATER DONT FORGET !!!!!!!!!!!
+
+
 export default function AddtaskMenu(props) {
 
+    // TitleError -> For displaying error Message
     const [TitleError, setTitleError] = useState(false)
 
-    // builder pattern for optional parameters like duedate
+    // Builder pattern for managing optional parameters like duedate
     class Todo {
-        constructor(Title, {DueDate} = {}) {
+        constructor(Title) {
             this.Title = Title;
-            this.DueDate = DueDate;
+            this.DueDate = "";
             this.Status = "Pending";
             this.id = uuid()
         }
+
+        AddDue(DueDate) {
+            this.DueDate = DueDate;
+        }
     }
 
-    // for checking mandatory fields
+    // For Toggling Error
     function toggleTitleError(val) {
-        setTitleError((prev) => {
-            return val
-        })
+        setTitleError(val)
     }
 
-    // adding new tasks
+    // Adding new tasks
     function updateTodo(CurrentTodo) {
         props.setTodos((prev) => {
-            // To update history variable
+
             props.updateHistory([...prev, CurrentTodo])
             return (
                 [...prev, CurrentTodo]
@@ -35,21 +38,24 @@ export default function AddtaskMenu(props) {
         })
 
 
-
     }
 
-    //on submit
+
     function onSubmitAddTasks(e) {
         e.preventDefault()
         if (!e.target[0].value) {
             toggleTitleError(true)
         } else {
-            // toggling states
+
             toggleTitleError(false)
             props.ToggleMenu(false)
             let Title = e.target[0].value;
             let Duedate = e.target[1].value;
-            let CurrentTodo = new Todo(Title, {DueDate: Duedate})
+            // New TODOObject
+            let CurrentTodo = new Todo(Title)
+            if (Duedate) {
+                CurrentTodo.AddDue(Duedate)
+            }
             updateTodo(CurrentTodo)
 
 
@@ -74,9 +80,8 @@ export default function AddtaskMenu(props) {
                 <form onSubmit={onSubmitAddTasks}>
                     <div>
                         {/*conditional rendering of error*/}
-                        {TitleError && <div id="form_todo_error">
-                            Please fill the following field
-                        </div>}
+                        {TitleError && <div id="form_todo_error">Please fill the following field</div>}
+
                         <label htmlFor="form_todo_title">Title:*</label>
                         <input type="text" id="form_todo_title"/>
 

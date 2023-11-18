@@ -5,12 +5,11 @@
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.89);
     opacity: 100;
-    top: 50%; /* Move the element 50% down from the top of the parent container */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 4;
     border-radius: 5px;
-    /*font-weight: 600;*/
     font-family: 'Kanit', sans-serif;
     box-shadow: 2px 2px 5px 1px #3f3f44;
 }
@@ -76,6 +75,7 @@ input[type=text] {
     background-color: #ededed;
     cursor: pointer;
 }
-#form_todo_error{
+
+#form_todo_error {
     color: #de3a3a;
 }

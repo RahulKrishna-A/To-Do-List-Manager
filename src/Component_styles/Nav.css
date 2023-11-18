@@ -1,16 +1,15 @@
-#main__navbar{
+#main__navbar {
     display: flex;
     flex-direction: row;
     padding: 1.5rem 0 0 2.5rem;
 }
-#main__navbar p{
+
+#main__navbar p {
     font-family: 'Josefin Sans', sans-serif;
     color: black;
     font-size: 3rem;
 }
 
-#nav__purple-font{
-    /*color: rgba(17, 42, 238, 0.83) !important;*/
-
+#nav__purple-font {
     color: rgba(87, 24, 210, 0.83) !important;
 }
