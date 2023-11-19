@@ -17,7 +17,7 @@ https://todolistmanager-rahul.netlify.app/
 - Filter Tasks : Tasks can be filteres based on their completion status.
 
 - Local Storage : Tasks are stored in the local storage of the user's browser.
-- 
+  
 ## Design Patterns Used
 
 - Memento Pattern : The Memento Pattern is utilized to enable undo and redo actions, for managing the tasks.
