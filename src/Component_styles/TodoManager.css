@@ -159,7 +159,7 @@ button[disabled]:hover {
     #TodoManager-container_options {
         display: flex;
         margin: 4rem 0 0 10%;
-        width: 80%;
+        width: 85%;
         align-items: center;
         position: relative;
     }

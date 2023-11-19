@@ -1,6 +1,6 @@
 
 .todos-bar {
-    width: 80%;
+    width: 70%;
     display: flex;
     padding: 10px 20px 10px 0;
     margin: 1rem 0 0 15%;
@@ -115,7 +115,7 @@
 
 @media screen and (max-width: 450px) {
     .todos-bar {
-        width: 80%;
+        width: 85%;
         display: flex;
         padding: 10px 20px 10px 0;
         margin: 1rem 0 0 10%;
@@ -208,13 +208,13 @@
     }
 
     .todos-bar_due {
-
+        padding: 0;
         color: rgb(65, 64, 66);
         font-weight: 550;
         border-radius: 8px;
         margin-left: 1rem;
-        width: 5rem;
-        background-color: #a29bfe;
+        width: 4rem;
+        /*background-color: #a29bfe;*/
         font-size: 0.7rem;
         display: flex;
         justify-content: center;
