@@ -13,3 +13,18 @@
 #nav__purple-font {
     color: rgba(87, 24, 210, 0.83) !important;
 }
+
+
+/*--------------Media queries------*/
+
+@media screen and (max-width: 450px) {
+    #main__navbar {
+        padding: 1.5rem 0 0 1rem;
+    }
+
+    #main__navbar p {
+        font-family: 'Josefin Sans', sans-serif;
+        color: black;
+        font-size: 2.5rem;
+    }
+}

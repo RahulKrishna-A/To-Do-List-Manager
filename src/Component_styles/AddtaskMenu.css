@@ -79,3 +79,15 @@ input[type=text] {
 #form_todo_error {
     color: #de3a3a;
 }
+
+
+/*-----------------Media queries-------------*/
+
+@media screen and (max-width: 450px){
+    #menu__form_todoadd {
+        position: absolute;
+        width: 60vw;
+        width: 60dvw;
+    }
+
+}
