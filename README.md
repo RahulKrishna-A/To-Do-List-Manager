@@ -1,6 +1,11 @@
 
 # To-Do-List-Manager
 
+## Ei Study Assignment
+#### Name : Rahul Krishna A
+#### Mail : rahulkrish321123@gmail.com
+
+
 This repository contains the implementation of a simple To-Do List Manager, designed as a programming exercise. The application allows users to manage their tasks by adding new tasks, marking them as completed, deleting tasks, viewing tasks based on their completion status along with Undo/Redo functionality. Additionally, the application incorporates key design patterns.
 
 ## Live Demo
