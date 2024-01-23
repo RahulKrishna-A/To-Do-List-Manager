@@ -1,7 +1,7 @@
 
 # To-Do-List-Manager
 
-## Ei Study Assignment
+## Ei Study 
 #### Name : Rahul Krishna A
 #### Mail : rahulkrish321123@gmail.com
 
